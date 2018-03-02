@@ -38,8 +38,33 @@ using Base.Test
         @test a.msg == "TestMsg"
     end
 
-    @testset "init!()" begin
-        # TODO: Add tests here
+    @testset "start!()" begin
+        @testset "render()" begin
+            a = Animator(1)
+
+            glyphs = ['T', 'e', 's', 't', '!']
+            animate_type = "Test型"
+
+            init!(a, glyphs, animate_type)
+            set_msg!(a, "TestMsg")
+
+            @test string(a.glyphs[1] * " " * a.msg) == "T TestMsg"
+        end
+
+        linear = map(x->x, [1:5;])
+        @test linear == [1, 2, 3, 4, 5]
+        
+        swing = map(x->
+            begin
+                if x <= 5
+                    x
+                else
+                    10-x
+                end
+            end, [1:8;]
+        )
+
+        @test swing == [1, 2, 3, 4, 5, 4, 3, 2]
     end
 
     @testset "update_msg!()" begin
