@@ -16,7 +16,7 @@ using Base.Test
         a = Animator(1)
 
         glyphs = ['T', 'e', 's', 't', '!']
-        animate_type = "Test型"
+        animate_type = "Test"
 
         @test_throws UndefRefError a.glyphs
         @test_throws UndefRefError a.animate_type
@@ -43,7 +43,7 @@ using Base.Test
             a = Animator(1)
 
             glyphs = ['T', 'e', 's', 't', '!']
-            animate_type = "Test型"
+            animate_type = "Test"
 
             init!(a, glyphs, animate_type)
             set_msg!(a, "TestMsg")
@@ -83,7 +83,7 @@ using Base.Test
         a = Animator(1)
 
         glyphs = ['T', 'e', 's', 't']
-        animate_type = "Test型"
+        animate_type = "Test"
 
         init!(a, glyphs, animate_type)
 

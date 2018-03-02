@@ -37,12 +37,12 @@ function start!(a::AbstractAnimator)
     end
 
     @schedule while a.flag
-        if a.animate_type == "直進型"
+        if a.animate_type == "linear"
             for i = 1:length(a.glyphs) 
                 # render i th element
                 render(i)
             end
-        elseif a.animate_type == "往復型"
+        elseif a.animate_type == "swing"
             for i = 1:2*length(a.glyphs) - 2
                 # render ( i<=length(a.glyphs) ? i : (2*length(a.glyphs) - i) ) th element
                 render(
