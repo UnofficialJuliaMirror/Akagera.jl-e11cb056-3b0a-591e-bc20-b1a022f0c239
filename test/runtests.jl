@@ -48,12 +48,12 @@ using Base.Test
             init!(a, glyphs, animate_type)
             set_msg!(a, "TestMsg")
 
-            @test string(a.glyphs[1] * " " * a.msg) == "T TestMsg"
+            @test string(a.glyphs[1]) * " " * a.msg == "T TestMsg"
         end
 
         linear = map(x->x, [1:5;])
         @test linear == [1, 2, 3, 4, 5]
-        
+
         swing = map(x->
             begin
                 if x <= 5
