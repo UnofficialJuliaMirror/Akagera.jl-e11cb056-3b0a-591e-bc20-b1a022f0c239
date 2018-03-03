@@ -3,25 +3,25 @@ using Base.Test
 
 @testset "Animator tests" begin
     @testset "Animator()" begin
-        interval_ms = 1
+        interval = 1
         frames = ["T", "e", "s", "t", "!"]
         animate_type = "Test"
 
-        a = Animator(interval_ms, frames, animate_type)
+        a = Animator(interval, frames, animate_type)
 
         @test a.flag == false
-        @test a.interval_ms == interval_ms
+        @test a.interval == interval
         @test_throws UndefRefError a.msg
         @test a.frames == frames
         @test a.animate_type == animate_type
     end
 
     @testset "init!()" begin
-        interval_ms = 1
+        interval = 1
         frames = ["T", "e", "s", "t", "!"]
         animate_type = "Test"
     
-        a = Animator(interval_ms, frames, animate_type)
+        a = Animator(interval, frames, animate_type)
 
         @test a.flag == false
 
@@ -31,11 +31,11 @@ using Base.Test
     end
 
     @testset "set_msg!()" begin
-        interval_ms = 1
+        interval = 1
         frames = ["T", "e", "s", "t", "!"]
         animate_type = "Test"
 
-        a = Animator(interval_ms, frames, animate_type)
+        a = Animator(interval, frames, animate_type)
 
         @test_throws UndefRefError a.msg
 
@@ -46,11 +46,11 @@ using Base.Test
 
     @testset "start!()" begin
         @testset "render()" begin
-            interval_ms = 1
+            interval = 1
             frames = ["T", "e", "s", "t", "!"]
             animate_type = "Test"
     
-            a = Animator(interval_ms, frames, animate_type)
+            a = Animator(interval, frames, animate_type)
 
             init!(a)
             set_msg!(a, "TestMsg")
@@ -75,11 +75,11 @@ using Base.Test
     end
 
     @testset "update_msg!()" begin
-        interval_ms = 1
+        interval = 1
         frames = ["T", "e", "s", "t", "!"]
         animate_type = "Test"
 
-        a = Animator(interval_ms, frames, animate_type)
+        a = Animator(interval, frames, animate_type)
 
         set_msg!(a, "TestMsg")
 
@@ -91,11 +91,11 @@ using Base.Test
     end
 
     @testset "finish!()" begin
-        interval_ms = 1
+        interval = 1
         frames = ["T", "e", "s", "t", "!"]
         animate_type = "Test"
 
-        a = Animator(interval_ms, frames, animate_type)
+        a = Animator(interval, frames, animate_type)
 
         init!(a)
 

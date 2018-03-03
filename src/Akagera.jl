@@ -7,15 +7,15 @@ end
 
 mutable struct Animator <: AbstractAnimator
     flag::Bool
-    interval_ms::Int
+    interval::Int
     msg::String
     frames::Vector{String}
     animate_type::String
 
-    function Animator(interval_ms::Int, frames::Vector{String}, animate_type::String)
+    function Animator(interval::Int, frames::Vector{String}, animate_type::String)
         self = new()
         self.flag = false
-        self.interval_ms = interval_ms
+        self.interval = interval
         self.frames = frames
         self.animate_type = animate_type
         
@@ -29,13 +29,13 @@ mutable struct Animator <: AbstractAnimator
 
         self = new()
         self.flag = false
-        self.interval_ms = begin
-            if haskey(json_dict, "interval_ms")
-                return json_dict["interval_ms"]
-            elseif haskey(kwargs_dict, "interval_ms")
-                return kwargs_dict["interval_ms"]
+        self.interval = begin
+            if haskey(json_dict, "interval")
+                return json_dict["interval"]
+            elseif haskey(kwargs_dict, "interval")
+                return kwargs_dict["interval"]
             else
-                throw(ArgumentError("interval_ms is not specified. You should set interval_ms in kwargs or json."))
+                throw(ArgumentError("interval is not specified. You should set interval in kwargs or json."))
             end
         end
 
@@ -70,7 +70,7 @@ function start!(a::AbstractAnimator)
 
     function render(i::Int)
         println(a.frames[i] * " " * a.msg)
-        sleep(a.interval_ms/1000)
+        sleep(a.interval/1000)
     end
 
     @schedule while a.flag
