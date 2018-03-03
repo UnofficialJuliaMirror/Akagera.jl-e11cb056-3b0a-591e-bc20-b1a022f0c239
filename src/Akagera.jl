@@ -2,6 +2,8 @@ module Akagera
 
 using JSON
 
+include("animecontainers.jl")
+
 abstract type AbstractAnimator 
 end
 
@@ -53,6 +55,17 @@ mutable struct Animator <: AbstractAnimator
                 return "linear"
             end
         end
+    end
+
+    function Animator(fc::AbstractAnimeContainer)
+        self = new()
+        self.flag = false
+
+        self.interval = fc.interval
+        self.frames = fc.frames
+        self.animate_type = fc.animate_type
+
+        return self
     end
 end
 
