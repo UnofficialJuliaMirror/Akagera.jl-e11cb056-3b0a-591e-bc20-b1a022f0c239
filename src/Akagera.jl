@@ -4,7 +4,7 @@ using JSON
 
 include("animecontainers.jl")
 
-abstract type AbstractAnimator 
+abstract type AbstractAnimator
 end
 
 mutable struct Animator <: AbstractAnimator
@@ -20,13 +20,13 @@ mutable struct Animator <: AbstractAnimator
         self.interval = interval
         self.frames = frames
         self.animate_type = animate_type
-        
+
         return self
     end
 
     function Animator(json::String; animate_type="") # JSON
         json_dict = JSON.parse(json)
-        
+
         self = new()
         self.flag = false
         self.interval = begin
@@ -78,15 +78,22 @@ function set_msg!(a::AbstractAnimator, msg::String)
 end
 
 function start!(a::AbstractAnimator)
+    is_first = true
 
     function render(i::Int)
-        println(a.frames[i] * " " * a.msg)
+        if !is_first
+            print("\r\033[K")
+        else
+            println(" ") # Put empty line not to hurt old prints
+            is_first = false
+        end
+        print(a.frames[i] * " " * a.msg)
         sleep(a.interval/1000)
     end
 
     @schedule while a.flag
         if a.animate_type == "linear"
-            for i = 1:length(a.frames) 
+            for i = 1:length(a.frames)
                 # render i th element
                 render(i)
             end
