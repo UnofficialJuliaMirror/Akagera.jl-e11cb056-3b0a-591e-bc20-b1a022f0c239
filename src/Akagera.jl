@@ -22,7 +22,7 @@ mutable struct Animator <: AbstractAnimator
         return self
     end
 
-    function Animator(json::String; kwargs...) # JSON
+    function Animator(json::String; animate_type="") # JSON
         json_dict = JSON.parse(json)
         kwargs_dict = Dict(kwargs)
         
@@ -32,10 +32,8 @@ mutable struct Animator <: AbstractAnimator
         self.interval = begin
             if haskey(json_dict, "interval")
                 return json_dict["interval"]
-            elseif haskey(kwargs_dict, "interval")
-                return kwargs_dict["interval"]
             else
-                throw(ArgumentError("interval is not specified. You should set interval in kwargs or json."))
+                throw(ArgumentError("interval is not specified. You should set interval in json."))
             end
         end
 
@@ -48,8 +46,8 @@ mutable struct Animator <: AbstractAnimator
         end
 
         self.animate_type = begin
-            if haskey(kwargs_dict, "animate_type")
-                return kwargs_dict["animate_type"]
+            if animate_type != ""
+                return animate_type
             else
                 warn("animate_type is not specified. Default value `linear` will be set.")
                 return "linear"
