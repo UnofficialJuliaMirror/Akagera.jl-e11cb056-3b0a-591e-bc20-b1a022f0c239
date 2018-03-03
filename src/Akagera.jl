@@ -10,19 +10,19 @@ mutable struct Animator <: AbstractAnimator
     frames::Vector{String}
     animate_type::String
 
-    function Animator(interval_ms::Int)
+    function Animator(interval_ms::Int, frames::Vector{String}, animate_type::String)
         self = new()
         self.flag = false
         self.interval_ms = interval_ms
-
+        self.frames = frames
+        self.animate_type = animate_type
+        
         return self
     end
 end
 
-function init!(a::AbstractAnimator, frames::Vector{String}, animate_type::String)
+function init!(a::AbstractAnimator)
     a.flag = true
-    a.frames = frames
-    a.animate_type = animate_type 
 end
 
 function set_msg!(a::AbstractAnimator, msg::String)
