@@ -26,14 +26,12 @@ mutable struct Animator <: AbstractAnimator
 
     function Animator(json::String; animate_type="") # JSON
         json_dict = JSON.parse(json)
-        kwargs_dict = Dict(kwargs)
         
-
         self = new()
         self.flag = false
         self.interval = begin
             if haskey(json_dict, "interval")
-                return json_dict["interval"]
+                json_dict["interval"]
             else
                 throw(ArgumentError("interval is not specified. You should set interval in json."))
             end
@@ -41,7 +39,7 @@ mutable struct Animator <: AbstractAnimator
 
         self.frames = begin
             if haskey(json_dict, "frames")
-                return json_dict["frames"]
+                json_dict["frames"]
             else
                 throw(ArgumentError("frames is not specified. You should set frames in json."))
             end
@@ -49,12 +47,14 @@ mutable struct Animator <: AbstractAnimator
 
         self.animate_type = begin
             if animate_type != ""
-                return animate_type
+                animate_type
             else
                 warn("animate_type is not specified. Default value `linear` will be set.")
-                return "linear"
+                "linear"
             end
         end
+
+        return self
     end
 
     function Animator(fc::AbstractAnimeContainer)
