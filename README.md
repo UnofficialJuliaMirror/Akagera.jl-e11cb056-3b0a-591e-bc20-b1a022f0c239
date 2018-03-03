@@ -3,6 +3,8 @@
 > Akagera is a cursor animator for Julia 😎  
 > Provided animators are from [cli-spinners](https://github.com/sindresorhus/cli-spinners)
 
+[![asciicast](https://asciinema.org/a/nltcx6DsidnBIvLXRnnfYhWkC.png)](https://asciinema.org/a/nltcx6DsidnBIvLXRnnfYhWkC)
+
 # Install
 ```julia
 Pkg.add("https://github.com/lcolaholicl/Akagera.jl")
