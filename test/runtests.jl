@@ -8,23 +8,23 @@ using Base.Test
         @test a.flag == false
         @test a.interval_ms == 1
         @test_throws UndefRefError a.msg
-        @test_throws UndefRefError a.glyphs
+        @test_throws UndefRefError a.frames
         @test_throws UndefRefError a.animate_type
     end
 
     @testset "init!()" begin
         a = Animator(1)
 
-        glyphs = ['T', 'e', 's', 't', '!']
+        frames = ["T", "e", "s", "t", "!"]
         animate_type = "Test"
 
-        @test_throws UndefRefError a.glyphs
+        @test_throws UndefRefError a.frames
         @test_throws UndefRefError a.animate_type
 
-        init!(a, glyphs, animate_type)
+        init!(a, frames, animate_type)
 
         @test a.flag == true
-        @test a.glyphs == glyphs
+        @test a.frames == frames
         @test a.animate_type == animate_type
     end
 
@@ -42,13 +42,13 @@ using Base.Test
         @testset "render()" begin
             a = Animator(1)
 
-            glyphs = ['T', 'e', 's', 't', '!']
+            frames = ["T", "e", "s", "t", "!"]
             animate_type = "Test"
 
-            init!(a, glyphs, animate_type)
+            init!(a, frames, animate_type)
             set_msg!(a, "TestMsg")
 
-            @test string(a.glyphs[1]) * " " * a.msg == "T TestMsg"
+            @test a.frames[1] * " " * a.msg == "T TestMsg"
         end
 
         linear = map(x->x, [1:5;])
@@ -82,10 +82,10 @@ using Base.Test
     @testset "finish!()" begin
         a = Animator(1)
 
-        glyphs = ['T', 'e', 's', 't']
+        frames = ["T", "e", "s", "t", "!"]
         animate_type = "Test"
 
-        init!(a, glyphs, animate_type)
+        init!(a, frames, animate_type)
 
         @test a.flag == true
 
