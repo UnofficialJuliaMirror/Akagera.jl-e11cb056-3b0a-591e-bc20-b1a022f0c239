@@ -1,5 +1,7 @@
 module Akagera
 
+using JSON
+
 abstract type AbstractAnimator 
 end
 
@@ -18,6 +20,41 @@ mutable struct Animator <: AbstractAnimator
         self.animate_type = animate_type
         
         return self
+    end
+
+    function Animator(json::String; kwargs...) # JSON
+        json_dict = JSON.parse(json)
+        kwargs_dict = Dict(kwargs)
+        
+
+        self = new()
+        self.flag = false
+        self.interval_ms = begin
+            if haskey(json_dict, "interval_ms")
+                return json_dict["interval_ms"]
+            elseif haskey(kwargs_dict, "interval_ms")
+                return kwargs_dict["interval_ms"]
+            else
+                throw(ArgumentError("interval_ms is not specified. You should set interval_ms in kwargs or json."))
+            end
+        end
+
+        self.frames = begin
+            if haskey(json_dict, "frames")
+                return json_dict["frames"]
+            else
+                throw(ArgumentError("frames is not specified. You should set frames in json."))
+            end
+        end
+
+        self.animate_type = begin
+            if haskey(kwargs_dict, "animate_type")
+                return kwargs_dict["animate_type"]
+            else
+                warn("animate_type is not specified. Default value `linear` will be set.")
+                return "linear"
+            end
+        end
     end
 end
 
