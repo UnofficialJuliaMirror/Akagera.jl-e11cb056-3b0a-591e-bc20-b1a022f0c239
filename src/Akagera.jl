@@ -80,7 +80,13 @@ export Animator,
        weather,
        christmas
 
+"""
+       Animator(interval::Int, frames::Vector{String}, animate_type::String)
+       Animator(json::String; animate_type="")
+       Animator(fc::AnimeContainer)
 
+Construct an `Animator` with animation loaded from given arguments.
+"""
 mutable struct Animator
     flag::Bool
     interval::Int
@@ -143,14 +149,36 @@ mutable struct Animator
     end
 end
 
+"""
+    init!(a::Animator)
+
+Set `a.flag = true` to be ready to start the animation.
+"""
 function init!(a::Animator)
     a.flag = true
 end
 
+"""
+    set_msg!(a::Animator, msg::String)
+
+Set `msg` field of `Animator`.
+
+```julia-repl
+julia> a = Animator(arrow3)
+julia> set_msg!(a, "Hello, world!!!")
+julia> a.msg
+Hello, world!!!
+```
+"""
 function set_msg!(a::Animator, msg::String)
     a.msg = msg
 end
 
+"""
+    start!(a::Animator)
+
+Start the animation.
+"""
 function start!(a::Animator)
     is_first = true
 
@@ -187,10 +215,20 @@ function start!(a::Animator)
     end
 end
 
+"""
+    update_msg!(a::Animator, new_msg::String)
+
+Change `msg` field of `Animator`. This works even while animation is activated.
+"""
 function update_msg!(a::Animator, new_msg::String)
     set_msg!(a, new_msg)
 end
 
+"""
+    finish!(a::Animator)
+
+Finish the animation.
+"""
 function finish!(a::Animator)
     a.flag = false
 end
