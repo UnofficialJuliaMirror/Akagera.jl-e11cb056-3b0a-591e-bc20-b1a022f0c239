@@ -179,18 +179,18 @@ end
 
 Start the animation.
 """
-function start!(a::Animator)
+function start!(a::Animator; io=STDERR)
     init!(a)
     is_first = true
 
     function render(i::Int)
         if !is_first
-            print("\r\033[K")
+            print(io, "\r\033[K")
         else
-            println(" ") # Put empty line not to hurt old prints
+            println(io, " ") # Put empty line not to hurt old prints
             is_first = false
         end
-        print(a.frames[i] * " " * a.msg)
+        print(io, a.frames[i] * " " * a.msg)
         sleep(a.interval/1000)
     end
 
