@@ -1,20 +1,22 @@
 using Documenter, Akagera
 
-const PAGES = [
-    "Home" => "index.md",
-    "Manual" => "manual/tutorial.md",
-    "Library" => "lib/animator.md"
-]
-
 makedocs(
     modules = [Akagera],
+    clean = false,
+    format = :html,
+    sitename = "Documenter.jl",
     authors = "Colaholic",
-    pages = PAGES
+    pages = [
+        "Home" => "index.md",
+        "Manual" => "manual/tutorial.md",
+        "Library" => "lib/animator.md"
+    ],
+    html_canonical = "https://lcolaholicl.github.io/Akagera.j/stable"
 )
 
 deploydocs(
-    deps = Deps.pip("mkdocs"),
     repo = "github.com/lcolaholicl/Akagera.jl.git",
-    julia = "0.6",
-    osname = "linux"
+    target = "build",
+    deps = nothing,
+    make = nothing,
 )
