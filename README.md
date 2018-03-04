@@ -15,14 +15,14 @@ Pkg.add("https://github.com/lcolaholicl/Akagera.jl")
 ```julia
 using Akagera
 
-a = Akagera.Animator(Akagera.arrow3)
-Akagera.init!(a)
-Akagera.set_msg!(a, "Making Julia great...")
+a = Animator(:arrow3)
+init!(a)
+set_msg!(a, "Making Julia great...")
 
-Akagera.start!(a)
+start!(a)
 # Heavy computation here...
-Akagera.end!(a)
+end!(a)
 ```
 
 # 🚧 Document
-Coming soon...
+[Available here](https://lcolaholicl.github.io/Akagera.jl/stable/)
