@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Akagera.jl Documentation\n\n\n\n\nManual\n\n\nWIP. Sorry!\n\n\n\n\nLibrary\n\n\n\n\nAnimator", 
+            "text": "Akagera.jl Documentation\n\n\n\n\nManual\n\n\n\n\nTutorial\n\n\n\n\n\n\nLibrary\n\n\n\n\nAnimator", 
             "title": "Home"
         }, 
         {
@@ -12,7 +12,7 @@
         }, 
         {
             "location": "/#manual", 
-            "text": "WIP. Sorry!", 
+            "text": "Tutorial", 
             "title": "Manual"
         }, 
         {
