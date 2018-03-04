@@ -21,7 +21,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Home",
     "title": "Manual",
     "category": "section",
-    "text": "Pages = [\n    \"manual/tutorial.md\"\n]\nDepth = 1"
+    "text": "Tutorial"
 },
 
 {
@@ -29,7 +29,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Home",
     "title": "Library",
     "category": "section",
-    "text": "Pages = [\n    \"lib/lib.md\"\n]\nDepth = 1"
+    "text": "Animator\nAnimeContainer"
 },
 
 {
@@ -41,7 +41,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "manual/tutorial.html#Tutorial-1",
+    "location": "manual/tutorial.html#manual-tutorial-1",
     "page": "Manual",
     "title": "Tutorial",
     "category": "section",
@@ -65,83 +65,99 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "lib/lib.html#",
-    "page": "Library",
-    "title": "Library",
+    "location": "lib/animator.html#",
+    "page": "Animator",
+    "title": "Animator",
     "category": "page",
     "text": ""
 },
 
 {
-    "location": "lib/lib.html#Library-documentation-1",
-    "page": "Library",
-    "title": "Library documentation",
+    "location": "lib/animator.html#lib-animator-1",
+    "page": "Animator",
+    "title": "Animator",
     "category": "section",
-    "text": "Documentation for Akagera.jl\'s library."
+    "text": ""
 },
 
 {
-    "location": "lib/lib.html#Index-1",
-    "page": "Library",
-    "title": "Index",
-    "category": "section",
-    "text": "Pages = [\"lib.md\"]"
-},
-
-{
-    "location": "lib/lib.html#Akagera.Animator",
-    "page": "Library",
+    "location": "lib/animator.html#Akagera.Animator",
+    "page": "Animator",
     "title": "Akagera.Animator",
     "category": "type",
     "text": "   Animator(interval::Int, frames::Vector{String}, animate_type::String)\n   Animator(json::String; animate_type=\"\")\n   Animator(fc::AnimeContainer)\n\nConstruct an Animator with animation loaded from given arguments.\n\n\n\n\n\n"
 },
 
 {
-    "location": "lib/lib.html#Akagera.init!",
-    "page": "Library",
+    "location": "lib/animator.html#Constructors-and-Types-1",
+    "page": "Animator",
+    "title": "Constructors and Types",
+    "category": "section",
+    "text": "Animator"
+},
+
+{
+    "location": "lib/animator.html#Akagera.init!",
+    "page": "Animator",
     "title": "Akagera.init!",
     "category": "function",
     "text": "init!(a::Animator)\n\nSet a.flag = true to be ready to start the animation. This should not be called manually.\n\n\n\n\n\n"
 },
 
 {
-    "location": "lib/lib.html#Akagera.set_msg!",
-    "page": "Library",
+    "location": "lib/animator.html#Akagera.set_msg!",
+    "page": "Animator",
     "title": "Akagera.set_msg!",
     "category": "function",
     "text": "set_msg!(a::Animator, msg::String)\n\nSet msg field of Animator.\n\njulia> a = Animator(arrow3)\njulia> set_msg!(a, \"Hello, world!!!\")\njulia> a.msg\nHello, world!!!\n\n\n\n\n\n"
 },
 
 {
-    "location": "lib/lib.html#Akagera.start!",
-    "page": "Library",
+    "location": "lib/animator.html#Akagera.start!",
+    "page": "Animator",
     "title": "Akagera.start!",
     "category": "function",
     "text": "start!(a::Animator)\n\nStart the animation.\n\n\n\n\n\n"
 },
 
 {
-    "location": "lib/lib.html#Akagera.update_msg!",
-    "page": "Library",
+    "location": "lib/animator.html#Akagera.update_msg!",
+    "page": "Animator",
     "title": "Akagera.update_msg!",
     "category": "function",
     "text": "update_msg!(a::Animator, new_msg::String)\n\nChange msg field of Animator. This works even while animation is activated.\n\n\n\n\n\n"
 },
 
 {
-    "location": "lib/lib.html#Akagera.finish!",
-    "page": "Library",
+    "location": "lib/animator.html#Akagera.finish!",
+    "page": "Animator",
     "title": "Akagera.finish!",
     "category": "function",
     "text": "finish!(a::Animator)\n\nFinish the animation.\n\n\n\n\n\n"
 },
 
 {
-    "location": "lib/lib.html#Library-1",
-    "page": "Library",
-    "title": "Library",
+    "location": "lib/animator.html#Functions-1",
+    "page": "Animator",
+    "title": "Functions",
     "category": "section",
-    "text": "Animator\ninit!\nset_msg!\nstart!\nupdate_msg!\nfinish!"
+    "text": "init!\nset_msg!\nstart!\nupdate_msg!\nfinish!"
+},
+
+{
+    "location": "lib/animecontainer.html#",
+    "page": "AnimeContainer",
+    "title": "AnimeContainer",
+    "category": "page",
+    "text": ""
+},
+
+{
+    "location": "lib/animecontainer.html#lib-animecontainer-1",
+    "page": "AnimeContainer",
+    "title": "AnimeContainer",
+    "category": "section",
+    "text": ""
 },
 
 ]}
