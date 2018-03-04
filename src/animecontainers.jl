@@ -1,3 +1,8 @@
+"""
+    AnimeContainer(interval::Int, frames::Vector{String}, animate_type::String)
+
+Construct an `AnimeContainer`, animation container literally.
+"""
 mutable struct AnimeContainer
     interval::Int
     frames::Vector{String}

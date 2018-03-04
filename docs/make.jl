@@ -9,7 +9,7 @@ makedocs(
     pages = [
         "Home" => "index.md",
         "Manual" => "manual/tutorial.md",
-        "Library" => [
+        "Library" => Any[
             "lib/animator.md",
             "lib/animecontainer.md"
         ]

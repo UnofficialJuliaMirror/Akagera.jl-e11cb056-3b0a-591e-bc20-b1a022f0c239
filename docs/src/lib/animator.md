@@ -1,5 +1,8 @@
 # [Animator](@id lib-animator)
 
+```@meta
+CurrentModule = Akagera
+```
 ## Constructors and Types
 ```@docs
 Animator
