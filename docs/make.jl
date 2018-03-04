@@ -15,5 +15,5 @@ deploydocs(
     deps = Deps.pip("mkdocs"),
     repo = "github.com/lcolaholicl/Akagera.jl.git",
     julia = "0.6",
-    osname = "osx"
+    osname = "linux"
 )
