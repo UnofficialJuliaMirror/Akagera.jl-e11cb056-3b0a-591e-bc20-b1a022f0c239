@@ -15,7 +15,7 @@ end
 
 # Animes from cli-spinners goes here...
 
-dots = AnimeContainer(
+const dots = AnimeContainer(
     80,
     [
         "⠋",
@@ -32,7 +32,7 @@ dots = AnimeContainer(
     "linear"
 )
 
-dots2 = AnimeContainer(
+const dots2 = AnimeContainer(
     80,
     [
         "⣾",
@@ -47,7 +47,7 @@ dots2 = AnimeContainer(
     "linear"
 )
 
-dots3 = AnimeContainer(
+const dots3 = AnimeContainer(
     80,
     [
         "⠋",
@@ -64,7 +64,7 @@ dots3 = AnimeContainer(
     "linear"
 )
 
-dots4 = AnimeContainer(
+const dots4 = AnimeContainer(
     80,
     [
         "⠄",
@@ -85,7 +85,7 @@ dots4 = AnimeContainer(
     "linear"
 )
 
-dots5 = AnimeContainer(
+const dots5 = AnimeContainer(
     80,
     [
         "⠋",
@@ -109,7 +109,7 @@ dots5 = AnimeContainer(
     "linear"
 )
 
-dots6 = AnimeContainer(
+const dots6 = AnimeContainer(
     80,
     [
         "⠁",
@@ -140,7 +140,7 @@ dots6 = AnimeContainer(
     "linear"
 )
 
-dots7 = AnimeContainer(
+const dots7 = AnimeContainer(
     80,
     [
         "⠈",
@@ -171,7 +171,7 @@ dots7 = AnimeContainer(
     "linear"
 )
 
-dots8 = AnimeContainer(
+const dots8 = AnimeContainer(
     80,
     [
         "⠁",
@@ -207,7 +207,7 @@ dots8 = AnimeContainer(
     "linear"
 )
 
-dots9 = AnimeContainer(
+const dots9 = AnimeContainer(
     80,
     [
         "⢹",
@@ -222,7 +222,7 @@ dots9 = AnimeContainer(
     "linear"
 )
 
-dots10 = AnimeContainer(
+const dots10 = AnimeContainer(
     80,
     [
         "⢄",
@@ -236,7 +236,7 @@ dots10 = AnimeContainer(
     "linear"
 )
 
-dots11 = AnimeContainer(
+const dots11 = AnimeContainer(
     100,
     [
         "⠁",
@@ -251,7 +251,7 @@ dots11 = AnimeContainer(
     "linear"
 )
 
-dots12 = AnimeContainer(
+const dots12 = AnimeContainer(
     80,
     [
         "⢀⠀",
@@ -314,7 +314,7 @@ dots12 = AnimeContainer(
     "linear"
 )
 
-line = AnimeContainer(
+const line = AnimeContainer(
     130,
      [
         "-",
@@ -325,7 +325,7 @@ line = AnimeContainer(
     "linear"
 )
 
-line2 = AnimeContainer(
+const line2 = AnimeContainer(
     100,
     [
         "⠂",
@@ -338,7 +338,7 @@ line2 = AnimeContainer(
     "linear"
 )
 
-pipe = AnimeContainer(
+const pipe = AnimeContainer(
     100,
     [
         "┤",
@@ -353,7 +353,7 @@ pipe = AnimeContainer(
     "linear"
 )
 
-simpleDots = AnimeContainer(
+const simpleDots = AnimeContainer(
     400,
     [
         ".  ",
@@ -364,7 +364,7 @@ simpleDots = AnimeContainer(
     "linear"
 )
 
-simpleDotsScrolling = AnimeContainer(
+const simpleDotsScrolling = AnimeContainer(
     200,
     [
         ".  ",
@@ -377,7 +377,7 @@ simpleDotsScrolling = AnimeContainer(
     "linear"
 )
 
-star = AnimeContainer(
+const star = AnimeContainer(
     70,
     [
         "✶",
@@ -390,7 +390,7 @@ star = AnimeContainer(
     "linear"
 )
 
-star2 = AnimeContainer(
+const star2 = AnimeContainer(
     80,
     [
         "+",
@@ -400,7 +400,7 @@ star2 = AnimeContainer(
     "linear"
 )
 
-flip = AnimeContainer(
+const flip = AnimeContainer(
     70,
     [
         "_",
@@ -419,7 +419,7 @@ flip = AnimeContainer(
     "linear"
 )
 
-hamburger = AnimeContainer(
+const hamburger = AnimeContainer(
     100,
     [
         "☱",
@@ -429,7 +429,7 @@ hamburger = AnimeContainer(
     "linear"
 )
 
-growVertical = AnimeContainer(
+const growVertical = AnimeContainer(
     120,
     [
         "▁",
@@ -446,7 +446,7 @@ growVertical = AnimeContainer(
     "linear"
 )
 
-growHorizontal = AnimeContainer(
+const growHorizontal = AnimeContainer(
     120,
     [
         "▏",
@@ -465,7 +465,7 @@ growHorizontal = AnimeContainer(
      "linear"
 )
 
-balloon = AnimeContainer(
+const balloon = AnimeContainer(
     140,
     [
         " ",
@@ -479,7 +479,7 @@ balloon = AnimeContainer(
     "linear"
 )
 
-balloon2 = AnimeContainer(
+const balloon2 = AnimeContainer(
     120,
     [
         ".",
@@ -493,7 +493,7 @@ balloon2 = AnimeContainer(
     "linear"
 )
 
-noise = AnimeContainer(
+const noise = AnimeContainer(
     100,
     [
         "▓",
@@ -503,7 +503,7 @@ noise = AnimeContainer(
     "linear"
 )
 
-bounce = AnimeContainer(
+const bounce = AnimeContainer(
     120,
     [
         "⠁",
@@ -514,7 +514,7 @@ bounce = AnimeContainer(
     "linear"
 )
 
-boxBounce = AnimeContainer(
+const boxBounce = AnimeContainer(
     120,
     [
         "▖",
@@ -525,7 +525,7 @@ boxBounce = AnimeContainer(
     "linear"
 )
 
-boxBounce2 = AnimeContainer(
+const boxBounce2 = AnimeContainer(
     100,
     [
         "▌",
@@ -536,7 +536,7 @@ boxBounce2 = AnimeContainer(
     "linear"
 )
 
-triangle = AnimeContainer(
+const triangle = AnimeContainer(
     50,
     [
         "◢",
@@ -547,7 +547,7 @@ triangle = AnimeContainer(
     "linear"
 )
 
-arc = AnimeContainer(
+const arc = AnimeContainer(
     100,
     [
         "◜",
@@ -560,7 +560,7 @@ arc = AnimeContainer(
     "linear"
 )
 
-circle = AnimeContainer(
+const circle = AnimeContainer(
     120,
     [
         "◡",
@@ -570,7 +570,7 @@ circle = AnimeContainer(
     "linear"
 )
 
-squareCorners = AnimeContainer(
+const squareCorners = AnimeContainer(
     180,
     [
         "◰",
@@ -581,7 +581,7 @@ squareCorners = AnimeContainer(
     "linear"
 )
 
-circleQuarters = AnimeContainer(
+const circleQuarters = AnimeContainer(
     120,
     [
         "◴",
@@ -592,7 +592,7 @@ circleQuarters = AnimeContainer(
     "linear"
 )
 
-circleHalves = AnimeContainer(
+const circleHalves = AnimeContainer(
     50,
     [
         "◐",
@@ -603,7 +603,7 @@ circleHalves = AnimeContainer(
     "linear"
 )
 
-squish = AnimeContainer(
+const squish = AnimeContainer(
     100,
     [
         "╫",
@@ -612,7 +612,7 @@ squish = AnimeContainer(
     "linear"
 )
 
-toggle = AnimeContainer(
+const toggle = AnimeContainer(
     250,
     [
         "⊶",
@@ -621,7 +621,7 @@ toggle = AnimeContainer(
     "linear"
 )
 
-toggle2 = AnimeContainer(
+const toggle2 = AnimeContainer(
     80,
     [
         "▫",
@@ -630,7 +630,7 @@ toggle2 = AnimeContainer(
     "linear"
 )
 
-toggle3 = AnimeContainer(
+const toggle3 = AnimeContainer(
     120,
     [
         "□",
@@ -639,7 +639,7 @@ toggle3 = AnimeContainer(
     "linear"
 )
 
-toggle4 = AnimeContainer(
+const toggle4 = AnimeContainer(
     100,
     [
         "■",
@@ -650,7 +650,7 @@ toggle4 = AnimeContainer(
     "linear"
 )
 
-toggle5 = AnimeContainer(
+const toggle5 = AnimeContainer(
     100,
     [
         "▮",
@@ -659,7 +659,7 @@ toggle5 = AnimeContainer(
     "linear"
 )
 
-toggle6 = AnimeContainer(
+const toggle6 = AnimeContainer(
     300,
     [
         "ဝ",
@@ -668,7 +668,7 @@ toggle6 = AnimeContainer(
     "linear"
 )
 
-toggle7 = AnimeContainer(
+const toggle7 = AnimeContainer(
     80,
     [
         "⦾",
@@ -677,7 +677,7 @@ toggle7 = AnimeContainer(
     "linear"
 )
 
-toggle8 = AnimeContainer(
+const toggle8 = AnimeContainer(
     100,
     [
         "◍",
@@ -686,7 +686,7 @@ toggle8 = AnimeContainer(
     "linear"
 )
 
-toggle9 = AnimeContainer(
+const toggle9 = AnimeContainer(
     100,
     [
         "◉",
@@ -695,7 +695,7 @@ toggle9 = AnimeContainer(
     "linear"
 )
 
-toggle10 = AnimeContainer(
+const toggle10 = AnimeContainer(
     100,
     [
         "㊂",
@@ -705,7 +705,7 @@ toggle10 = AnimeContainer(
     "linear"
 )
 
-toggle11 = AnimeContainer(
+const toggle11 = AnimeContainer(
     50,
     [
         "⧇",
@@ -714,7 +714,7 @@ toggle11 = AnimeContainer(
     "linear"
 )
 
-toggle12 = AnimeContainer(
+const toggle12 = AnimeContainer(
     120,
     [
         "☗",
@@ -723,7 +723,7 @@ toggle12 = AnimeContainer(
     "linear"
 )
 
-toggle13 = AnimeContainer(
+const toggle13 = AnimeContainer(
     80,
     [
         "=",
@@ -733,7 +733,7 @@ toggle13 = AnimeContainer(
     "linear"
 )
 
-arrow = AnimeContainer(
+const arrow = AnimeContainer(
     100,
     [
         "←",
@@ -748,7 +748,7 @@ arrow = AnimeContainer(
     "linear"
 )
 
-arrow2 = AnimeContainer(
+const arrow2 = AnimeContainer(
     80,
     [
         "⬆️ ",
@@ -763,7 +763,7 @@ arrow2 = AnimeContainer(
     "linear"
 )
 
-arrow3 = AnimeContainer(
+const arrow3 = AnimeContainer(
     120,
     [
         "▹▹▹▹▹",
@@ -776,7 +776,7 @@ arrow3 = AnimeContainer(
     "linear"
 )
 
-bouncingBar = AnimeContainer(
+const bouncingBar = AnimeContainer(
     80,
     [
         "[    ]",
@@ -798,7 +798,7 @@ bouncingBar = AnimeContainer(
     "linear"
 )
 
-bouncingBall = AnimeContainer(
+const bouncingBall = AnimeContainer(
     80,
     [
         "( ●    )",
@@ -815,7 +815,7 @@ bouncingBall = AnimeContainer(
     "linear"
 )
 
-smiley = AnimeContainer(
+const smiley = AnimeContainer(
     200,
     [
         "😄 ",
@@ -824,7 +824,7 @@ smiley = AnimeContainer(
     "linear"
 )
 
-monkey = AnimeContainer(
+const monkey = AnimeContainer(
     300,
     [
         "🙈 ",
@@ -835,7 +835,7 @@ monkey = AnimeContainer(
     "linear"
 )
 
-hearts = AnimeContainer(
+const hearts = AnimeContainer(
     100,
     [
         "💛 ",
@@ -847,7 +847,7 @@ hearts = AnimeContainer(
     "linear"
 )
 
-clock = AnimeContainer(
+const clock = AnimeContainer(
     100,
     [
         "🕐 ",
@@ -865,7 +865,7 @@ clock = AnimeContainer(
       "linear"
 )
 
-earth = AnimeContainer(
+const earth = AnimeContainer(
     180,
     [
         "🌍 ",
@@ -875,7 +875,7 @@ earth = AnimeContainer(
     "linear"
 )
 
-moon = AnimeContainer(
+const moon = AnimeContainer(
     80,
     [
         "🌑 ",
@@ -890,7 +890,7 @@ moon = AnimeContainer(
     "linear"
 )
 
-runner = AnimeContainer(
+const runner = AnimeContainer(
     140,
     [
         "🚶 ",
@@ -899,7 +899,7 @@ runner = AnimeContainer(
     "linear"
 )
 
-pong = AnimeContainer(
+const pong = AnimeContainer(
     80,
     [
         "▐⠂       ▌",
@@ -936,7 +936,7 @@ pong = AnimeContainer(
     "linear"
 )
 
-shark = AnimeContainer(
+const shark = AnimeContainer(
     120,
     [
         "▐|\\____________▌",
@@ -969,7 +969,7 @@ shark = AnimeContainer(
     "linear"
 )
 
-dqpb = AnimeContainer(
+const dqpb = AnimeContainer(
     100,
     [
         "d",
@@ -980,7 +980,7 @@ dqpb = AnimeContainer(
     "linear"
 )
 
-weather = AnimeContainer(
+const weather = AnimeContainer(
     100,
     [
         "☀️ ",
@@ -1010,7 +1010,7 @@ weather = AnimeContainer(
     "linear"
 )
 
-christmas = AnimeContainer(
+const christmas = AnimeContainer(
     400,
     [
         "🌲",
