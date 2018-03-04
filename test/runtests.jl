@@ -1,12 +1,13 @@
-using Akagera: Animator, init!, set_msg!, start!, update_msg!, finish!
+using Akagera
 using Base.Test
 
 @testset "Animator tests" begin
-    @testset "Animator()" begin
+    @testset "Animator(interval::Int, frames::Vector{String}, animate_type::String)" begin
         interval = 1
         frames = ["T", "e", "s", "t", "!"]
         animate_type = "Test"
 
+        @test_nowarn Animator(interval, frames, animate_type) 
         a = Animator(interval, frames, animate_type)
 
         @test a.flag == false
@@ -14,6 +15,52 @@ using Base.Test
         @test_throws UndefRefError a.msg
         @test a.frames == frames
         @test a.animate_type == animate_type
+    end
+
+    @testset "Animator(json::String; animate_type)" begin
+        json = """
+        {
+            "interval": 2018,
+            "frames": ["T", "e", "s", "t", "!"]
+        }
+        """
+
+        @test_nowarn Animator(json, animate_type="linear")
+        a = Animator(json, animate_type="linear")
+
+        @test a.frames == ["T", "e", "s", "t", "!"]
+        @test a.interval == 2018
+
+        @test_warn "animate_type is not specified. Default value `linear` will be set." Animator(json)
+    
+        json_without_interval = """
+        {
+            "frames": ["T", "e", "s", "t", "!"] 
+        }
+        """
+
+        @test_throws ArgumentError Animator(json_without_interval, animate_type="linear")
+
+        json_without_frames = """
+        {
+            "interval": 2018
+        }
+        """
+
+        @test_throws ArgumentError Animator(json_without_frames, animate_type="linear")
+    end
+
+    @testset "Animator(fc::AnimeContainer)" begin
+        fc = arrow3
+        
+        @test_nowarn Animator(fc)
+        a = Animator(fc)
+
+        @test a.flag == false
+        @test a.interval == fc.interval
+        @test_throws UndefRefError a.msg
+        @test a.frames == fc.frames
+        @test a.animate_type == fc.animate_type
     end
 
     @testset "init!()" begin
@@ -25,7 +72,7 @@ using Base.Test
 
         @test a.flag == false
 
-        init!(a)
+        @test_nowarn init!(a)
 
         @test a.flag == true
     end
@@ -39,7 +86,7 @@ using Base.Test
 
         @test_throws UndefRefError a.msg
 
-        set_msg!(a, "TestMsg")
+        @test_nowarn set_msg!(a, "TestMsg")
 
         @test a.msg == "TestMsg"
     end
@@ -84,7 +131,7 @@ using Base.Test
 
         @test a.msg == "TestMsg"
 
-        update_msg!(a, "TestUpdatingMsg")
+        @test_nowarn update_msg!(a, "TestUpdatingMsg")
 
         @test a.msg == "TestUpdatingMsg"
     end
@@ -100,7 +147,7 @@ using Base.Test
 
         @test a.flag == true
 
-        finish!(a)
+        @test_nowarn finish!(a)
 
         @test a.flag == false
     end
