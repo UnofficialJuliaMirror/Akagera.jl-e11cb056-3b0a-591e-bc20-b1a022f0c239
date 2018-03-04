@@ -3,4 +3,5 @@
 *.jl.mem
 
 # Documenter
-docs/build
+docs/build/
+docs/site/
