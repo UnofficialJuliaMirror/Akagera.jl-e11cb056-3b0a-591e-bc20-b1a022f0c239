@@ -152,7 +152,7 @@ end
 """
     init!(a::Animator)
 
-Set `a.flag = true` to be ready to start the animation.
+Set `a.flag = true` to be ready to start the animation. This should not be called manually.
 """
 function init!(a::Animator)
     a.flag = true
@@ -180,6 +180,7 @@ end
 Start the animation.
 """
 function start!(a::Animator)
+    init!(a)
     is_first = true
 
     function render(i::Int)

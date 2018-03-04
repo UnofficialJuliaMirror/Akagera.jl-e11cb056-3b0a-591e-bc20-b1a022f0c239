@@ -16,7 +16,6 @@ Pkg.add("https://github.com/lcolaholicl/Akagera.jl")
 using Akagera
 
 a = Animator(:arrow3)
-init!(a)
 set_msg!(a, "Making Julia great...")
 
 start!(a)

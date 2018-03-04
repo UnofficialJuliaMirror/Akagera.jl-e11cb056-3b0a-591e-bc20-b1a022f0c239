@@ -52,7 +52,6 @@ using Base.Test
     
             a = Animator(interval, frames, animate_type)
 
-            init!(a)
             set_msg!(a, "TestMsg")
 
             @test a.frames[1] * " " * a.msg == "T TestMsg"
