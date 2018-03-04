@@ -1,4 +1,4 @@
-# Tutorial
+# [Tutorial](@id manual-tutorial)
 
 ## Introduction
 
