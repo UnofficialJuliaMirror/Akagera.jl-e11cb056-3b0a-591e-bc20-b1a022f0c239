@@ -77,7 +77,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Animator",
     "title": "Animator",
     "category": "section",
-    "text": ""
+    "text": "CurrentModule = Akagera"
 },
 
 {
@@ -157,7 +157,23 @@ var documenterSearchIndex = {"docs": [
     "page": "AnimeContainer",
     "title": "AnimeContainer",
     "category": "section",
-    "text": ""
+    "text": "CurrentModule = Akagera"
+},
+
+{
+    "location": "lib/animecontainer.html#Akagera.AnimeContainer",
+    "page": "AnimeContainer",
+    "title": "Akagera.AnimeContainer",
+    "category": "type",
+    "text": "AnimeContainer(interval::Int, frames::Vector{String}, animate_type::String)\n\nConstruct an AnimeContainer, animation container literally.\n\n\n\n\n\n"
+},
+
+{
+    "location": "lib/animecontainer.html#Constructors-and-Types-1",
+    "page": "AnimeContainer",
+    "title": "Constructors and Types",
+    "category": "section",
+    "text": "AnimeContainer"
 },
 
 ]}
