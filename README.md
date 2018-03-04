@@ -34,7 +34,7 @@ finish!(a)
 [docs-stable-url]: https://lcolaholicl.github.io/Akagera.jl/stable
 
 [travis-img]: https://travis-ci.org/lcolaholicl/Akagera.jl.svg?branch=master
-[travis-url]: https://travis-ci.org/lcolaholilc/Akagera.jl?branch=master
+[travis-url]: https://travis-ci.org/lcolaholicl/Akagera.jl?branch=master
 
 [codecov-img]: https://codecov.io/gh/lcolaholicl/Akagera.jl/branch/master/graphs/badge.svg?branch=master
 [codecov-url]: http://codecov.io/github/lcolaholicl/Akagera.jl?branch=master
