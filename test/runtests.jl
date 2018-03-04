@@ -132,6 +132,17 @@ using Base.Test
             @test a.frames[1] * " " * a.msg == "T TestMsg"
         end
 
+        a = Animator(dots)
+
+        @test try
+            start!(a)
+            finish!(a)
+
+            true
+        catch
+            false
+        end
+
         linear = map(x->x, [1:5;])
         @test linear == [1, 2, 3, 4, 5]
 
