@@ -2,6 +2,7 @@ using Documenter, Akagera
 
 const PAGES = [
     "Home" => "index.md",
+    "Manual" => "manual/tutorial.md",
     "Library" => "lib/animator.md"
 ]
 

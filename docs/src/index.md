@@ -1,6 +1,6 @@
 # Akagera.jl Documentation
 
 ## Manual
-WIP. Sorry!
+* [Tutorial](@ref manual-tutorial)
 ## Library
 * [Animator](@ref lib-animator)
