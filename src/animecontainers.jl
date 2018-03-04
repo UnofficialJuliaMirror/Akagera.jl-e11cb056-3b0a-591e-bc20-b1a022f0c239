@@ -1,7 +1,4 @@
-abstract type AbstractAnimeContainer
-end
-
-mutable struct AnimeContainer <: AbstractAnimeContainer
+mutable struct AnimeContainer
     interval::Int
     frames::Vector{String}
     animate_type::String

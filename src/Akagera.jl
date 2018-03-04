@@ -54,7 +54,7 @@ mutable struct Animator
         return self
     end
 
-    function Animator(fc::AbstractAnimeContainer)
+    function Animator(fc::AnimeContainer)
         self = new()
         self.flag = false
 
