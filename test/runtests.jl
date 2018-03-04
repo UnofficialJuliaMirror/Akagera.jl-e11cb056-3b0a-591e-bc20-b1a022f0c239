@@ -7,7 +7,13 @@ using Base.Test
         frames = ["T", "e", "s", "t", "!"]
         animate_type = "Test"
 
-        @test_nowarn Animator(interval, frames, animate_type) 
+        @test try
+            Animator(interval, frames, animate_type) 
+            true
+        catch
+            false
+        end
+
         a = Animator(interval, frames, animate_type)
 
         @test a.flag == false
@@ -25,7 +31,13 @@ using Base.Test
         }
         """
 
-        @test_nowarn Animator(json, animate_type="linear")
+        @test try
+            Animator(json, animate_type="linear")
+            true
+        catch
+            false
+        end
+
         a = Animator(json, animate_type="linear")
 
         @test a.frames == ["T", "e", "s", "t", "!"]
@@ -53,7 +65,13 @@ using Base.Test
     @testset "Animator(fc::AnimeContainer)" begin
         fc = arrow3
         
-        @test_nowarn Animator(fc)
+        @test try
+            Animator(fc)
+            true
+        catch
+            false
+        end
+
         a = Animator(fc)
 
         @test a.flag == false
@@ -72,7 +90,12 @@ using Base.Test
 
         @test a.flag == false
 
-        @test_nowarn init!(a)
+        @test try
+            init!(a)
+            true
+        catch
+            false
+        end
 
         @test a.flag == true
     end
@@ -86,7 +109,12 @@ using Base.Test
 
         @test_throws UndefRefError a.msg
 
-        @test_nowarn set_msg!(a, "TestMsg")
+        @test try
+            set_msg!(a, "TestMsg")
+            true
+        catch
+            false
+        end
 
         @test a.msg == "TestMsg"
     end
@@ -131,7 +159,12 @@ using Base.Test
 
         @test a.msg == "TestMsg"
 
-        @test_nowarn update_msg!(a, "TestUpdatingMsg")
+        @test try
+            update_msg!(a, "TestUpdatingMsg")
+            true
+        catch
+            false
+        end
 
         @test a.msg == "TestUpdatingMsg"
     end
@@ -147,7 +180,12 @@ using Base.Test
 
         @test a.flag == true
 
-        @test_nowarn finish!(a)
+        @test try
+            finish!(a)
+            true
+        catch
+            false
+        end
 
         @test a.flag == false
     end
