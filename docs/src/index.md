@@ -1,6 +1,16 @@
 # Akagera.jl Documentation
 
 ## Manual
-* [Tutorial](@ref manual-tutorial)
+```@contents
+Pages = [
+    "manual/tutorial.md"
+]
+Depth = 1
+```
 ## Library
-* [Animator](@ref lib-animator)
+```@contents
+Pages = [
+    "lib/lib.md"
+]
+Depth = 1
+```

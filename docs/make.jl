@@ -4,12 +4,12 @@ makedocs(
     modules = [Akagera],
     clean = false,
     format = :html,
-    sitename = "Documenter.jl",
+    sitename = "Akagera.jl",
     authors = "Colaholic",
     pages = [
         "Home" => "index.md",
         "Manual" => "manual/tutorial.md",
-        "Library" => "lib/animator.md"
+        "Library" => "lib/lib.md"
     ],
     html_canonical = "https://lcolaholicl.github.io/Akagera.j/stable"
 )

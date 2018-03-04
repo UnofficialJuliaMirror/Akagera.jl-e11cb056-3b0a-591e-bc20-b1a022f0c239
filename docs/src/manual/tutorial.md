@@ -1,4 +1,4 @@
-# [Tutorial](@id manual-tutorial)
+# Tutorial
 
 ## Introduction
 
@@ -15,9 +15,9 @@ start!(animator)
 # some process here...
 finish!(animator)
 ```
-[Animator](@ref lib-animator) does all about animation control.
+[`Animator`](@ref) does all about animation control.
 Many animations are already implemented (Thanks to [cli-spinners](https://github.com/sindresorhus/cli-spinners)).
 
 !!! note  
-    Animation runs forever until finish!() is called. That means,
+    Animation runs forever until [`finish!`](@ref) is called. That means,
     in REPL there is no way but `Ctrl-D` to stop the animation.
