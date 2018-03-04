@@ -11,7 +11,7 @@ extra_css:
 markdown_extensions:
 - extra
 - tables
-- fenced-code
+- fenced_code
 
 docs_dir: 'build'
 
