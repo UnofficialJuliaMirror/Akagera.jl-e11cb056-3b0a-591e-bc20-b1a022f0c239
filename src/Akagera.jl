@@ -4,10 +4,7 @@ using JSON
 
 include("animecontainers.jl")
 
-abstract type AbstractAnimator
-end
-
-mutable struct Animator <: AbstractAnimator
+mutable struct Animator
     flag::Bool
     interval::Int
     msg::String
@@ -69,15 +66,15 @@ mutable struct Animator <: AbstractAnimator
     end
 end
 
-function init!(a::AbstractAnimator)
+function init!(a::Animator)
     a.flag = true
 end
 
-function set_msg!(a::AbstractAnimator, msg::String)
+function set_msg!(a::Animator, msg::String)
     a.msg = msg
 end
 
-function start!(a::AbstractAnimator)
+function start!(a::Animator)
     is_first = true
 
     function render(i::Int)
@@ -113,11 +110,11 @@ function start!(a::AbstractAnimator)
     end
 end
 
-function update_msg!(a::AbstractAnimator, new_msg::String)
+function update_msg!(a::Animator, new_msg::String)
     set_msg!(a, new_msg)
 end
 
-function finish!(a::AbstractAnimator)
+function finish!(a::Animator)
     a.flag = false
 end
 
