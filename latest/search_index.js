@@ -21,7 +21,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Home",
     "title": "Manual",
     "category": "section",
-    "text": "Tutorial"
+    "text": "Pages = [\n    \"manual/tutorial.md\"\n]\nDepth = 1"
 },
 
 {
@@ -29,7 +29,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Home",
     "title": "Library",
     "category": "section",
-    "text": "Animator"
+    "text": "Pages = [\n    \"lib/lib.md\"\n]\nDepth = 1"
 },
 
 {
@@ -41,7 +41,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "manual/tutorial.html#manual-tutorial-1",
+    "location": "manual/tutorial.html#Tutorial-1",
     "page": "Manual",
     "title": "Tutorial",
     "category": "section",
@@ -61,11 +61,11 @@ var documenterSearchIndex = {"docs": [
     "page": "Manual",
     "title": "Usage",
     "category": "section",
-    "text": "using Akagera\nanimator = Animator(dots)\nset_msg!(animator, \"Hello, world!\")\n\nstart!(animator)\n# some process here...\nfinish!(animator)Animator does all about animation control. Many animations are already implemented (Thanks to cli-spinners).note: Note\nAnimation runs forever until finish!() is called. That means, in REPL there is no way but Ctrl-D to stop the animation."
+    "text": "using Akagera\nanimator = Animator(dots)\nset_msg!(animator, \"Hello, world!\")\n\nstart!(animator)\n# some process here...\nfinish!(animator)Animator does all about animation control. Many animations are already implemented (Thanks to cli-spinners).note: Note\nAnimation runs forever until finish! is called. That means, in REPL there is no way but Ctrl-D to stop the animation."
 },
 
 {
-    "location": "lib/animator.html#",
+    "location": "lib/lib.html#",
     "page": "Library",
     "title": "Library",
     "category": "page",
@@ -73,15 +73,23 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "lib/animator.html#lib-animator-1",
+    "location": "lib/lib.html#Library-documentation-1",
     "page": "Library",
-    "title": "Animator",
+    "title": "Library documentation",
     "category": "section",
-    "text": "CurrentModule = Akagera"
+    "text": "Documentation for Akagera.jl\'s library."
 },
 
 {
-    "location": "lib/animator.html#Akagera.Animator",
+    "location": "lib/lib.html#Index-1",
+    "page": "Library",
+    "title": "Index",
+    "category": "section",
+    "text": "Pages = [\"lib.md\"]"
+},
+
+{
+    "location": "lib/lib.html#Akagera.Animator",
     "page": "Library",
     "title": "Akagera.Animator",
     "category": "type",
@@ -89,15 +97,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "lib/animator.html#Type-1",
-    "page": "Library",
-    "title": "Type",
-    "category": "section",
-    "text": "Animator"
-},
-
-{
-    "location": "lib/animator.html#Akagera.init!",
+    "location": "lib/lib.html#Akagera.init!",
     "page": "Library",
     "title": "Akagera.init!",
     "category": "function",
@@ -105,7 +105,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "lib/animator.html#Akagera.set_msg!",
+    "location": "lib/lib.html#Akagera.set_msg!",
     "page": "Library",
     "title": "Akagera.set_msg!",
     "category": "function",
@@ -113,7 +113,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "lib/animator.html#Akagera.start!",
+    "location": "lib/lib.html#Akagera.start!",
     "page": "Library",
     "title": "Akagera.start!",
     "category": "function",
@@ -121,7 +121,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "lib/animator.html#Akagera.update_msg!",
+    "location": "lib/lib.html#Akagera.update_msg!",
     "page": "Library",
     "title": "Akagera.update_msg!",
     "category": "function",
@@ -129,7 +129,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "lib/animator.html#Akagera.finish!",
+    "location": "lib/lib.html#Akagera.finish!",
     "page": "Library",
     "title": "Akagera.finish!",
     "category": "function",
@@ -137,11 +137,11 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "lib/animator.html#Animator-functions-1",
+    "location": "lib/lib.html#Library-1",
     "page": "Library",
-    "title": "Animator functions",
+    "title": "Library",
     "category": "section",
-    "text": "init!\nset_msg!\nstart!\nupdate_msg!\nfinish!"
+    "text": "Animator\ninit!\nset_msg!\nstart!\nupdate_msg!\nfinish!"
 },
 
 ]}
