@@ -10,8 +10,9 @@
 [![asciicast](https://asciinema.org/a/nltcx6DsidnBIvLXRnnfYhWkC.png)](https://asciinema.org/a/nltcx6DsidnBIvLXRnnfYhWkC)
 
 # Install
+on the Julia REPL, type:
 ```julia
-Pkg.add("https://github.com/lcolaholicl/Akagera.jl")
+> Pkg.add("Akagera")
 ```
 🐕 < Wow, such easy
 
