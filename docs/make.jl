@@ -18,6 +18,7 @@ makedocs(
 )
 
 deploydocs(
+    julia = "nightly",
     repo = "github.com/lcolaholicl/Akagera.jl.git",
     target = "build",
     deps = nothing,
